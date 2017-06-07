@@ -1,6 +1,7 @@
 $( document ).ready(function() {
     console.log( "ready!" );
-
+    
+//do this on click
 
 $("#add-food").on("click", function() {
 
