@@ -9,10 +9,6 @@ $("#add-food").on("click", function() {
 
 	var value = $('#foody_input').val();
 	console.log(value);
-  var foods = [""];
-
-
-  foods.push(value);
 
 	   var queryURL = "https://developers.zomato.com/api/v2.1/search?entity_id=601&entity_type=city&apikey=c3268e89927f3e51654afc5f7b0c4f4b&count=5&q=" +value;        // =================================================================
         $.ajax({
@@ -20,10 +16,20 @@ $("#add-food").on("click", function() {
         }).done(function  (response){
            console.log(response); 
         for (var i = 0; i < response.restaurants.length; i++) {
-          console.log('name:', response.restaurants[i].restaurant.name);
-          console.log('address:', response.restaurants[i].restaurant.location.address);
-          console.log('cost for two:', response.restaurants[i].restaurant.average_cost_for_two);
+          var latitude = response.restaurants[i].restaurant.location.latitude;
+          var longitude = response.restaurants[i].restaurant.location.longitude;
+          var name = response.restaurants[i].restaurant.name;
+          var address = response.restaurants[i].restaurant.location.address;
+          var cost = response.restaurants[i].restaurant.average_cost_for_two;
 
+
+
+
+          console.log('name:', name);
+          console.log('address:', address);
+          console.log('cost for two:', cost);
+          console.log('latitude:', latitude);
+          console.log('longitude:', longitude);
     //      console.log('url:', response.restaurants[i].restaurant.url);
           
 
