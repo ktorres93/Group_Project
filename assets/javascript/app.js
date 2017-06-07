@@ -20,10 +20,12 @@ $("#add-food").on("click", function() {
         }).done(function  (response){
            console.log(response); 
         for (var i = 0; i < response.restaurants.length; i++) {
-          console.log('cost for two:', response.restaurants[i].restaurant.average_cost_for_two);
           console.log('name:', response.restaurants[i].restaurant.name);
-    //      console.log('url:', response.restaurants[i].restaurant.url);
           console.log('address:', response.restaurants[i].restaurant.location.address);
+          console.log('cost for two:', response.restaurants[i].restaurant.average_cost_for_two);
+
+    //      console.log('url:', response.restaurants[i].restaurant.url);
+          
 
         if (response.restaurants[i].restaurant.has_online_delivery == 0){
           console.log("no delivery");
