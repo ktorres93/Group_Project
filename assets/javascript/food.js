@@ -98,8 +98,8 @@ if(name !== "null"){
   function initMap() {
 
     event.preventDefault();
-      for (var i = 0; i < coordinates.length; i+2) {
-        console.log(coordinates[i]);
+      for (var i = 0; i < coordinates.length; i++) {
+        console.log(name);
       }
       var uluru = {lat: parseInt($("#lat").html()), lng: parseInt($("#long").html())};
       var map = new google.maps.Map(document.getElementById('map'), {
@@ -110,19 +110,6 @@ if(name !== "null"){
       position: uluru,
       map: map
     });
-
-    var infoWindow = new google.maps.InfoWindow(), marker, i;
-    
-    // Loop through our array of markers & place each one on the map  
-    for( i = 0; i < markers.length; i++ ) {
-        var coords = new google.maps.LatLng(markers[i][1], markers[i][2]);
-        bounds.extend(position);
-        marker = new google.maps.Marker({
-            position: position,
-            map: map,
-            title: markers[i][0]
-        });
-
 
 
 
