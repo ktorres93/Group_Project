@@ -7,7 +7,7 @@ $("#add-food").on("click", function() {
       event.preventDefault();
           console.clear();
       var value = $('#foody_input').val();
-      var queryURL = "https://developers.zomato.com/api/v2.1/search?entity_id=601&entity_type=city&apikey=c3268e89927f3e51654afc5f7b0c4f4b&count=5&q=" + value;
+      var queryURL = "https://developers.zomato.com/api/v2.1/search?entity_id=601&entity_type=city&apikey=c3268e89927f3e51654afc5f7b0c4f4b&count=15&q=" + value;
       console.log(value);
 
         $.ajax({
@@ -19,13 +19,16 @@ $("#add-food").on("click", function() {
           var longitude = response.restaurants[i].restaurant.location.longitude;
           var name = response.restaurants[i].restaurant.name;
           var address = response.restaurants[i].restaurant.location.address;
+          var locality_verbose = response.restaurants[i].restaurant.location.locality_verbose;
           var cost = response.restaurants[i].restaurant.average_cost_for_two;
 
           console.log('name:', name);
           console.log('address:', address);
+          console.log('city:', locality_verbose);
           console.log('cost for two:', cost);
           console.log('latitude:', latitude);
           console.log('longitude:', longitude);
+
     //      console.log('url:', response.restaurants[i].restaurant.url);
         if (response.restaurants[i].restaurant.has_online_delivery == 0){
           console.log("no delivery");
