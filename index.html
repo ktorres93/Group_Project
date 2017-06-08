@@ -19,6 +19,8 @@
 		<link rel="stylesheet" href="assets/css/normalize.css">
 		<link rel="stylesheet" href="assets/css/skeleton.css">
 		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
 		<script type="text/javascript" src="assets/javascript/food.js"></script>
 		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtYlJoca8aYs-U7v-R4fgMX6n2h74hAnU&callback=initMap"
   type="text/javascript"></script>
@@ -29,7 +31,7 @@
 		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 		<div class="container">
 			<div class="row">
-				<div class="one-half column" style="margin-top: 25%">
+				<div id="firstLine"  style="margin-top: 25%">
 					<h4>Hungry? Ravenous? Famished?</h4>
 					
 					<p>This app is just trying to locate some food right now.</p>
@@ -42,8 +44,8 @@
 			<label for="food-input">Whatcha tryna eat?</label>
 			<input type="text" id="foody_input"><br>
 			<input id="add-food" type="submit" value="eat some food my guy">
-			<div>
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d224444.70494984777!2d-81.50883706514772!3d28.48109711736305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1496871021852" width="400" height="300" frameborder="0" style="border:0" allowfullscreen>
+			<div id="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d224444.70494984777!2d-81.50883706514772!3d28.48109711736305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1496871021852" width="1000" height="300" frameborder="0" style="border:0" allowfullscreen>
 				
 				</iframe>
 			</div>
