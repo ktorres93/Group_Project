@@ -44,8 +44,10 @@ $("#add-food").on("click", function() {
 
 
       var wellSection = $("<div>");
+
       wellSection.addClass("well");
       wellSection.attr("id", "article-well-");
+      wellSection.empty();
       $("#well-section").append(wellSection);
 
       // Confirm that the specific JSON for the article isn't missing any details
@@ -93,11 +95,12 @@ $("#add-food").on("click", function() {
 
 
 });
-if(name !== "null"){
+
 
   function initMap() {
 
-    event.preventDefault();
+ 
+
       for (var i = 0; i < coordinates.length; i++) {
         console.log(name);
       }
@@ -106,17 +109,29 @@ if(name !== "null"){
       zoom: 4,
       center: uluru
      });
-    var marker = new google.maps.Marker({
-      position: uluru,
-      map: map
-    });
+    var marker, i;
+
+    var infowindow = new google.maps.InfoWindow();
+
+    for (i = 0; i < coordinates.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(coordinates[i], coordinates[i+1]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(name);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
 
 
 
 
 };
 
-};
 
 
 
