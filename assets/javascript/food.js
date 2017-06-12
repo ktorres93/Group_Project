@@ -16,6 +16,7 @@ $(document).ready(function() {
             url: queryURL
         }).done(function(response) {
             console.log(response);
+            $("#well-section").html("");
             for (var i = 0; i < response.restaurants.length; i++) {
                 var latitude = response.restaurants[i].restaurant.location.latitude;
                 var longitude = response.restaurants[i].restaurant.location.longitude;
