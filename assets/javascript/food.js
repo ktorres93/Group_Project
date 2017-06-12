@@ -100,7 +100,7 @@ function initMap() {
         lng: parseInt($("#long").html())
     };
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
+        zoom: 7,
         center: uluru
     });
     var marker, i;
