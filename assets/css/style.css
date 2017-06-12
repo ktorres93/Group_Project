@@ -1,0 +1,18 @@
+
+body{
+	margin-left: 30px;
+	margin-right: 30px;
+	background-color: wheat;
+}
+#firstLine h4{
+	text-align: center;
+}
+p{
+	text-align: center;
+}
+label{
+	text-align: center;
+}
+#food-form{
+	text-align: center;
+}

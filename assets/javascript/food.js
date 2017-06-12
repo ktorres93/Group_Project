@@ -16,6 +16,7 @@ $(document).ready(function() {
         var queryURL = "https://developers.zomato.com/api/v2.1/search?entity_id=601&entity_type=city&apikey=c3268e89927f3e51654afc5f7b0c4f4b&count=3&q=" + value;
         console.log(value);
 
+
         $.ajax({
             url: queryURL
         }).done(function(response) {
@@ -54,6 +55,7 @@ $(document).ready(function() {
                 }
 
 // Appends the reponse information to the top results div i.e. our article well.
+
                 var wellSection = $("<div>");
 
                 wellSection.addClass("well");
@@ -61,7 +63,7 @@ $(document).ready(function() {
                 wellSection.empty();
                 $("#well-section").append(wellSection);
 
-                // If there is a restaurant name append it's information to the page.
+
                 if (name !== "null") {
                     $("#article-well-")
                         .append(
@@ -69,6 +71,7 @@ $(document).ready(function() {
                             name + "</span><strong> " +
                             address + "</strong></h3>" + "<h2 id='lat'>" + latitude + "</h2>" + "<h2 id='long'>" + longitude + "</h2>"
                         );
+
 
                 
                 }
@@ -83,6 +86,7 @@ $(document).ready(function() {
 
             };
 //Calls initialize map function
+
             initMap();
         });
 
@@ -101,6 +105,7 @@ function initMap() {
     };
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 7,
+
         center: uluru
     });
     var marker, i;
@@ -116,6 +121,7 @@ function initMap() {
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
                 infowindow.setContent(names[i] + "<br>" + addresses[i] + "<br>" + cities[i] + "<br>" +  coordinates[i] + "<br>" + coordinates[i+1]);
+
                 infowindow.open(map, marker);
             }
         })(marker, i));
