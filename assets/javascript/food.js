@@ -104,7 +104,9 @@ function initMap() {
         lng: parseInt($("#long").html())
     };
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 7,
+
+        zoom: 8,
+
 
         center: uluru
     });
@@ -131,3 +133,12 @@ function initMap() {
 
 
 };
+/*
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-IcM0mrkbjxEb2g04rQFvnsvZV23YLtU&callback=initMap">
+    </script>
+
+};
+
+*/
+
