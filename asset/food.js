@@ -67,14 +67,17 @@ $(document).ready(function() {
                 if (name !== "null") {
                     $("#article-well-")
                         .append(
-                            "<h5 class='articleHeadline'><span class='label label-primary'>" +
-                            name + "</span> <br>" + 
-                            address + "</h5>" + "<p id='lat'>" + latitude + "</p>" + "<p id='long'>" + longitude + "</p>"
+                            "<p class='articleHeadline'><span class='label label-primary'>" +
+                            name + "</span><strong> " +
+                            address + "</strong></p>" 
+                            //+ "<h2 id='lat'>" + latitude + "</h2>" + "<h2 id='long'>" + longitude + "</h2>"
                         );
 
 
                 
                 }
+
+                //one change
 
 // Pushes the response information into their respective arrays
 
