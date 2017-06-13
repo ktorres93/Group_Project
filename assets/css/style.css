@@ -1,18 +1,21 @@
 
 body{
-	margin-left: 30px;
-	margin-right: 30px;
-	background-color: wheat;
+	background-color: black;
 }
-#firstLine h4{
-	text-align: center;
+h4{
+	color:  white;
 }
-p{
-	text-align: center;
+footer{
+	color: white;
 }
-label{
-	text-align: center;
+#map {
+        height: 300px;
+        width: 100%;
 }
-#food-form{
-	text-align: center;
+
+.carousel{
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
 }
+
