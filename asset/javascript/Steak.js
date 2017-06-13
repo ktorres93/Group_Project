@@ -2,26 +2,14 @@
 
 $(document).ready(function(){
 	console.log("ready!");
- 		$('.carousel').carousel();
-// Next slide
-$('.carousel').carousel('next');
-$('.carousel').carousel('next', 3); // Move next n times.
-// Previous slide
-$('.carousel').carousel('prev');
-$('.carousel').carousel('prev', 4); // Move prev n times.
-// Set to nth slide
-$('.carousel').carousel('set', 4);
+
+		
+
+	$("#Steak").on("click", function() {
 
 
- 		
-		navigator.geolocation.getCurrentPosition(initialise);
+navigator.geolocation.getCurrentPosition(initialise);
 
-//	$("#McDonald").on("click", function() {
-
-//	});
-
-
-});
 
 
 
@@ -47,7 +35,7 @@ $('.carousel').carousel('set', 4);
 	function performSearch(){
 		var request = {
 			bounds : map.getBounds(),
-			name: "McDonald's"
+			name: "Steak"
 		    }
 		service.nearbySearch(request, searchResult);
 	};
@@ -83,20 +71,16 @@ $('.carousel').carousel('set', 4);
   	var marker = new google.maps.Marker({
   	position: currentLocation,
   	map: map,
-  	icon: "images/you.jpg"
+  	icon: "asset/images/you.jpg"
   });  
 
-// 	service = new google.maps.places.PlacesService(map);
- //	google.maps.event.addListenerOnce(map, "bounds_changed", performSearch);
+ 	service = new google.maps.places.PlacesService(map);
+ 	google.maps.event.addListenerOnce(map, "bounds_changed", performSearch);
 
 
-/*
+
 
   	$("refresh").click(performSearch);
-
-
-
-
   		var circle ={
   			fillcolor: "lightblue",
   			map:map,
@@ -105,6 +89,18 @@ $('.carousel').carousel('set', 4);
   		};
   		mycircle = new google.maps.Circle(circle);
 	
-*/
+
 
 };
+
+
+
+
+
+
+
+
+	});
+
+
+});

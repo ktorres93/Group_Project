@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 		
 
-	$("#McDonald").on("click", function() {
+	$("#Chipotle").on("click", function() {
 
 
 navigator.geolocation.getCurrentPosition(initialise);
@@ -35,7 +35,7 @@ navigator.geolocation.getCurrentPosition(initialise);
 	function performSearch(){
 		var request = {
 			bounds : map.getBounds(),
-			name: "McDonald's"
+			name: "Chipotle"
 		    }
 		service.nearbySearch(request, searchResult);
 	};
@@ -71,7 +71,7 @@ navigator.geolocation.getCurrentPosition(initialise);
   	var marker = new google.maps.Marker({
   	position: currentLocation,
   	map: map,
-  	icon: "images/you.jpg"
+  	icon: "asset/images/you.jpg"
   });  
 
  	service = new google.maps.places.PlacesService(map);

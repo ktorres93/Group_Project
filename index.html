@@ -24,9 +24,9 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel ="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="asset/css/normalize.css">
+  <link rel="stylesheet" href="asset/css/skeleton.css">
+  <link rel ="stylesheet" href="asset/css/style.css">
 
   <!--  Jquery
    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -35,7 +35,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <!--  Jquery from group
    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script type="text/javascript" src="javascript/food.js"></script>
+    <script type="text/javascript" src="asset/javascript/food.js"></script>
   <!--  geolocation
    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <script src="https://maps.googleapis.com/maps/api/js?&libraries=places&sensor=false"></script>
@@ -44,10 +44,27 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
+
+
+
 <body>
 
+<div id="weather"><h4>Hungry? </h4>
+                  <h4>Ravenous? Famished?</h4> </div>
+
+<video playsinline autoplay muted loop  id="bgvid" >
+ <!-- <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">    
+  <source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">    -->
+  <source src="http://images.all-free-download.com/footage_preview/webm/rain_132.webm" type="video/webm">    
+</video>  
+
+
+
+
+
   <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
 
   <div class="container">
     <div class="row">
@@ -59,8 +76,8 @@
   </div>
   </div>
 
+-->
 
- <!-- 
 
  <div class="container">
     <div class="row">
@@ -68,19 +85,28 @@
 
 
     <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/200/100/nature/1"></a>
+        <a class="carousel-item" href="#two!"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_XZ4azK8vEG8CYA0-GN6UFJ2QUIuQJOa8ZCVtCMGJIbQDRNuS" class="scale-with-grid"></a>
+        <a class="carousel-item" href="#three!"><img src="asset/images/02.jpg"></a>
+        <a class="carousel-item" href="#four!"><img src="asset/images/03.jpg"></a>
+        <a class="carousel-item" href="#five!"><img src="http://lorempixel.com/200/100/nature/5"></a>
+        <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/200/100/nature/2"></a>
+
+    <!--
         <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/200/200/nature/1"></a>
         <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/200/200/nature/2"></a>
         <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/200/200/nature/3"></a>
         <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/200/200/nature/4"></a>
         <a class="carousel-item" href="#five!"><img src="http://lorempixel.com/200/200/nature/5"></a>
         <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/200/200/nature/2"></a>
+        -->
   </div>
  
     </div>
   </div>
   </div>
 
--->
+
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -88,21 +114,22 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container">
   <div class="row">
-  <div class="eight columns">
+  <div class="nine columns">
+          
+          <br>
+          <input class="button-primary" type="submit" id="add-food"  value="Eat some food"> 
+          <input class="u-full-width" type="text" placeholder="name of food" id="foody_input">
+       
+       <input class="button-primary" type="submit" id="info"  value="Info!"> 
 
-
-
-
-  <br>
-          <h4>Hungry? Ravenous? Famished?</h4>  
-
-  <input class="button-primary" type="submit" id="add-food"  value="eat some food my guy">
-  <input type="text" id="foody_input"><br>
+      
+     
+          
 
       <div id="map" ></div>
   
 
-<!-- food list from jquery
+<!-- food list from jquery       <input type="text" id="foody_input" >
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <br>
@@ -111,7 +138,7 @@
 
     <!-- Panel Heading for the retrieved articles box -->
     <div class="panel-heading">
-      <h3 class="panel-title"><strong><i class="fa fa-table"></i>   Top Results</strong></h3>
+      <h4 class="panel-title"><strong><i class="fa fa-table"></i>   Top Results</strong></h4>
     </div>
 
     <!-- This main panel will hold each of the resulting articles -->
@@ -124,7 +151,7 @@
 <!--
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <!-- right column -->
-    <div class="four columns">
+    <div class="three columns">
 
 
 
@@ -132,24 +159,25 @@
     <br>
     <h4>Quick Search</h4>
 
-
-    <input class="button-primary" type="submit" id="add-food"  value="McDonald's">
-    
+          <input class="button-primary" type="submit" id="localweather"  value="Weather"> 
+          <br>
+        <input class="button-primary" type="submit" id="McDonald"  value="McDonald's">
     <br>
-        <input class="button-primary" type="submit" id="add-food"  value="Pizza">
+      <input class="button-primary" type="submit" id="Pizza"  value="Pizza"> 
+          <br>
+      <input class="button-primary" type="submit" id="Chinease"  value="Chinese">
+          <br>
+      <input class="button-primary" type="submit" id="Steak"  value="Steak">
+          <br>
+      <input class="button-primary" type="submit" id="Chipotle"  value="Chipotle">
+          <br>
+      <input class="button-primary" type="submit" id="WaWa"  value="WaWa">
+          <br>
+      <input class="button-primary" type="submit" id=""  value="">   
     <br>
-      <input class="button-primary" type="submit" id="add-food"  value="Pizza"> 
+      <input class="button-primary" type="submit" id=""  value=""> 
           <br>
-      <input class="button-primary" type="submit" id="add-food"  value="Pizza">
-          <br>
-      <input class="button-primary" type="submit" id="add-food"  value="Pizza">
-          <br>
-      <input class="button-primary" type="submit" id="add-food"  value="Pizza">
-          <br>
-      <input class="button-primary" type="submit" id="add-food"  value="Pizza">
-          <br>
-      <input class="button-primary" type="submit" id="add-food"  value="Pizza">   
-
+      <input class="button-primary" type="submit" id=""  value=""> 
 
 
   </div>
@@ -163,7 +191,7 @@
 <div class="container">
   <footer>
       <div class="twelve columns">
-    <p>Copyright @  12th June 2017 assignment</p>
+    Copyright @  12th June 2017 assignment
     </div>
   </footer>
 </div">
@@ -171,7 +199,11 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   
-<script type="text/javascript"   src="javascript/script.js" ></script>
-<script type="text/javascript"   src="javascript/mac.js" ></script>
+<script type="text/javascript"   src="asset/javascript/script.js" ></script>
+<script type="text/javascript"   src="asset/javascript/mac.js" ></script>
+<script type="text/javascript"   src="asset/javascript/chinease.js" ></script>
+<script type="text/javascript"   src="asset/javascript/steak.js" ></script>
+<script type="text/javascript"   src="asset/javascript/wawa.js" ></script>
+<script type="text/javascript"   src="asset/javascript/chipotle.js" ></script>
 </body>
 </html>

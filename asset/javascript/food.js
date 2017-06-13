@@ -67,9 +67,10 @@ $(document).ready(function() {
                 if (name !== "null") {
                     $("#article-well-")
                         .append(
-                            "<h3 class='articleHeadline'><span class='label label-primary'>" +
+                            "<p class='articleHeadline'><span class='label label-primary'>" +
                             name + "</span><strong> " +
-                            address + "</strong></h3>" + "<h2 id='lat'>" + latitude + "</h2>" + "<h2 id='long'>" + longitude + "</h2>"
+                            address + "</strong></p>" 
+                            //+ "<h2 id='lat'>" + latitude + "</h2>" + "<h2 id='long'>" + longitude + "</h2>"
                         );
 
 
