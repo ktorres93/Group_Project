@@ -59,6 +59,8 @@ video {
 #foody_input{
     width: 25em;
     font-size: 1em;
+    background-color: white;
+   padding-left: 5px;
 }
 h5{
      background-color:  #66b3ff;
@@ -66,4 +68,8 @@ h5{
 p{
  
     display: none;
+}
+.u-full-width{
+    padding-left: 80px;
+    background-color: white;
 }
