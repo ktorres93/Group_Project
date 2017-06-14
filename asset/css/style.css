@@ -54,6 +54,7 @@ video {
     border-radius: 0.2em;
     border: 1px solid #C60098;
     font-size: 3em;
+    margin-bottom: 5px;
 }
 #foody_input{
     width: 25em;
